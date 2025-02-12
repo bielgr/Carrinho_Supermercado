@@ -118,12 +118,7 @@ class _PDVScreenState extends State<PDVScreen> {
 }*/
 
   //comeco scan_product()
-  /*void _scanProduct() async {
-    final String? barcode = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => BarcodeScannerReturningImage()),
-    );
-
+  /*void _scanProduct(barcode) async {
     if (barcode != null && barcode.isNotEmpty) {
       _addProductToCart(barcode);
     }
@@ -211,7 +206,6 @@ class _PDVScreenState extends State<PDVScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: _onWillPop,
       child: Scaffold(
